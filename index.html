@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      background-color: #6a1e55;
+      width: 200px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    .main-content {
+      flex: 1;
+      box-sizing: border-box;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Currency Converter Dashboard
+  </header>
+  <div class="container">
+    <nav class="sidebar">
+      <a href="#" onclick="loadPage('/CurrencyConverter/currency.html')">Currency Converter</a>
+    </nav>
+    <div class="main-content">
+      <iframe id="contentFrame" src="login.html"></iframe>
+    </div>
+  </div>
+  <footer>
+    &copy; 2024 Currency Converter Application
+  </footer>
+
+  <script>
+    function loadPage(url) {
+      document.getElementById('contentFrame').src = url;
+    }
+  </script>
+</body>
+</html>
