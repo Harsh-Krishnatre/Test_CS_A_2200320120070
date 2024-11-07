@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        data = () => {
+            const uid = document.getElementById("uid").value;
+            const pass = document.getElementById("password").value;
+            const cpassw = document.getElementById("confirmpass").value;
+            const contact = document.getElementById("contact").value;
+            const email = document.getElementById("email").value;
+            if(uid === '' || pass ===''||cpassw ===''||contact ===''||email === ''){
+                alert('All field are mandatory!');
+                return false;
+            }
+            if(isNaN(contact)||contact.length != 10){
+                alert("Invalid Contact!");
+                return false;
+            }
+            if(pass != cpassw){
+                alert("Password Mismatch!")
+                return false;
+            }
+            if(email.charAt(email.length-4) != "." && email.charAt(email.length-3) != "."){
+                alert("Incorrect dot(.) position!");
+                return false;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Registeration Form</h1>
+        <form onsubmit="data()">
+        <div class="input-field">
+            <label for="uid">User ID:</label>
+            <input type="text" name="uid" id="uid">
+            <label for="contact">Contact:</label>
+            <input type="text" name="contact" id="contact">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <label for="confirmpass">Confirm Password:</label>
+            <input type="text" name="confirmpass" id="confirmpass">
+            <label for="email">Email ID:</label>
+            <input type="text" name="email" id="email">
+            <div class="buttons">
+                <button type="submit" id="submit" class="reg-btn">Register</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
+
