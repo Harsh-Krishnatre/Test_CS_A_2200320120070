@@ -31,7 +31,7 @@ h2{
     font-size: 20px;
     color: #cab0bd;
 }
-.input-group,.input-field input{
+.input-group input{
     width: 100%;
     padding: 5px;
     border: 1px solid #a64d79;
@@ -71,4 +71,16 @@ h1{
     text-align: center;
     color: white;
     text-shadow: 1px solid black;
+}
+
+.input-field input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #a64d79;
+    border-radius: 1px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #3b1c32;
+    color: #a64d79;
 }
